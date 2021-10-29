@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">SeaJobNow(Candidate)</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="login">Login</string>
+    <string name="hint_indos_no">Indos No.</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="powered_by_interlink_consultant"><b>Powered By</b> Interlink Consultant</string>
+    <string name="no_internet">Please Check Internet Connection</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="err_msg_name">Enter your Indos Number</string>
+    <string name="something_wrong">Something Worng! \nPlease Try again Later.</string>
+    <string name="register">Register</string>
+    <string name="firstname">First Name</string>
+    <string name="dob">Date Of Birth</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile No.</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="gender">Gender</string>
+    <string name="pincode">Pincode</string>
+    <string name="middle_name">Middle Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="want_to_logout">Are you sure you want to Logout?</string>
+    <string name="some_logout_text">If you logout we will not able to show you latest products.</string>
+    <string name="still_not_connected_register">New to SeaJobNow? Sign up</string>
+    <string name="email_id">Email Address</string>
+    <!--Job Post String-->
+    <string name="new_job">New Job Post</string>
+    <string name="name">Job Name *</string>
+    <string name="rank">Rank *</string>
+    <string name="ship">Vessel Type *</string>
+    <string name="location">Job Location *</string>
+    <string name="cancel"><u>Cancel</u></string>
+    <string name="department">Department *</string>
+    <string name="startDate">Post Start Date *</string>
+    <string name="endDate">Post Expiry Date *</string>
+    <string name="salary">Salary *</string>
+    <string name="employementtype">Employment Type *</string>
+    <string name="experieceType">Work Experience *</string>
+
+    <string name="job_desc">Job Description *</string>
+    <string name="job_opening">Job Opening *</string>
+    <string name="retry">Retry</string>
+    <string name="rupee_icon">₹</string>
+    <string name="more_details"><u>More Details</u></string>
+    <string name="label_opening">Openings :</string>
+    <string name="apply">Apply</string>
+    <string name="alreayd_have_an_account">Alreayd have an account ?</string>
+
+    <string name="large_text">Marine engineer who has sailed on ships and has complete technical
+        expertise of ships engines and generators operations,
+        fuelling operations Detailed engine performance record and monitoring</string>
+    <string name="or">or</string>
+    <string name="login_in">Log in</string>
+    <string name="forgot_password_yv">Forgot Password?</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="verify_otp">Enter verification Code</string>
+    <string name="otp_text">Enter 6 digit number that we send to</string>
+    <string name="resend_otp">Resend OTP?</string>
+
+    <string name="create_new_password">Create New Password</string>
+    <string name="new_password">New Password</string>
+    <string name="create_password">Create Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cdc_number">CDC Number</string>
+</resources>

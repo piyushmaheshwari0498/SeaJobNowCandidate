@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.VerifyActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/forlimlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/verify_otp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:id="@+id/header"
+                    style="@style/TitleTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/verify_otp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dim_foreground_material_light"
+                    android:textSize="@dimen/extra_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtext"
+                    style="@style/MediumTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/otp_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/dim_foreground_material_light" />
+
+
+                <in.aabhasjindal.otptextview.OtpTextView
+                    android:id="@+id/etOtpNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    app:bar_enabled="false"
+                    app:bar_height="1dp"
+                    app:length="6"
+                    app:otp_box_background_active="@color/alice_blue"
+                    app:otp_box_background_inactive="@color/ghost_white"
+                    app:otp_text_size="24dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_resend"
+                    style="@style/MediumTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/resend_otp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/blue_500" />
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Verify OTP"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium" />
+                <!--</LinearLayout>-->
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
+<!--
+<androidx.cardview.widget.CardView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="15dp"
+android:elevation="10dp"
+android:layout_gravity="center"
+android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="18sp"
+        android:textColor="@color/dim_foreground_material_light"
+        android:text="Verify OTP"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/header" />
+    <TextView
+        android:id="@+id/tvotp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OTP Number"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:layout_below="@id/tv"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/etOtpNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvotp"
+        android:ellipsize="start"
+        android:hint="Enter OTP "
+        android:inputType="number"
+        android:maxLength="50"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/etOtpNumber"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/circle"
+        android:text="Submit"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</RelativeLayout>
+</androidx.cardview.widget.CardView>-->
