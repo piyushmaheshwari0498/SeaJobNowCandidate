@@ -65,6 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             app:endIconMode="clear_text"
+          app:errorIconDrawable="@drawable/ic_baseline_error_outline"
+          app:errorTextColor="@color/red_400"
             app:startIconDrawable="@drawable/indosicon">
 
           <com.google.android.material.textfield.TextInputEditText
@@ -82,6 +84,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             app:endIconMode="clear_text"
+          app:errorIconDrawable="@drawable/ic_baseline_error_outline"
+          app:errorTextColor="@color/red_400"
           app:startIconDrawable="@drawable/ic_baseline_person_outline">
     <com.google.android.material.textfield.TextInputEditText
              android:id="@+id/input_first_name"
@@ -98,6 +102,8 @@
              android:layout_height="wrap_content"
              android:layout_marginTop="15dp"
              app:endIconMode="clear_text"
+          app:errorIconDrawable="@drawable/ic_baseline_error_outline"
+          app:errorTextColor="@color/red_400"
              app:startIconDrawable="@drawable/ic_baseline_person_outline">
      <com.google.android.material.textfield.TextInputEditText
              android:id="@+id/input_middle_name"
@@ -113,6 +119,8 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:layout_marginTop="15dp"
+           app:errorIconDrawable="@drawable/ic_baseline_error_outline"
+           app:errorTextColor="@color/red_400"
              app:endIconMode="clear_text"
             app:startIconDrawable="@drawable/ic_baseline_person_outline">
      <com.google.android.material.textfield.TextInputEditText
@@ -130,6 +138,8 @@
              android:layout_height="wrap_content"
              android:layout_marginTop="15dp"
              app:endIconMode="clear_text"
+          app:errorIconDrawable="@drawable/ic_baseline_error_outline"
+          app:errorTextColor="@color/red_400"
              app:startIconDrawable="@drawable/ic_date_of_birth">
       <com.google.android.material.textfield.TextInputEditText
              android:id="@+id/input_dob"
@@ -147,6 +157,8 @@
              android:layout_height="wrap_content"
              android:layout_marginTop="15dp"
              app:endIconMode="clear_text"
+         app:errorIconDrawable="@drawable/ic_baseline_error_outline"
+         app:errorTextColor="@color/red_400"
              app:startIconDrawable="@drawable/ic_baseline_alternate_email_24">
      <com.google.android.material.textfield.TextInputEditText
              android:id="@+id/input_email"
@@ -164,6 +176,8 @@
              android:layout_height="wrap_content"
              android:layout_marginTop="15dp"
              app:endIconMode="clear_text"
+         app:errorIconDrawable="@drawable/ic_baseline_error_outline"
+         app:errorTextColor="@color/red_400"
              app:startIconDrawable="@drawable/ic_baseline_mobile_friendly_24">
      <com.google.android.material.textfield.TextInputEditText
              android:id="@+id/input_mobile"
@@ -182,6 +196,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             app:endIconMode="clear_text"
+         app:errorIconDrawable="@drawable/ic_baseline_error_outline"
+         app:errorTextColor="@color/red_400"
            app:startIconDrawable="@drawable/lock">
        <com.google.android.material.textfield.TextInputEditText
              android:id="@+id/input_password"
@@ -199,6 +215,8 @@
              android:layout_height="wrap_content"
              android:layout_marginTop="15dp"
              app:endIconMode="clear_text"
+         app:errorIconDrawable="@drawable/ic_baseline_error_outline"
+         app:errorTextColor="@color/red_400"
              app:startIconDrawable="@drawable/lock">
       <com.google.android.material.textfield.TextInputEditText
               android:id="@+id/input_confirm_password"
@@ -281,6 +299,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/pincode"
                     android:maxLines="1"
+                    android:maxLength="6"
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.button.MaterialButton

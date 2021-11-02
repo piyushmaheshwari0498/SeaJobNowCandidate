@@ -10,24 +10,31 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.example.seajobnowcandidate.Entity.request.CityRequest;
 import com.example.seajobnowcandidate.R;
+import com.example.seajobnowcandidate.Session.AppSharedPreference;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CityAdapter extends ArrayAdapter<CityRequest> implements Filterable {
     private final Context mContext;
-    private final List<CityRequest> mCityRequests;
-    private final List<CityRequest> mCityRequestListAll;
+    List<CityRequest> mCityRequests;
+    List<CityRequest> mCityRequestListAll;
+    List<CityRequest> mCityRequestSuggestion;
     private final int mLayoutResourceId;
+    AppSharedPreference appSharedPreference;
 
     public CityAdapter(Context context, int resource, List<CityRequest> cityRequests) {
-        super(context, resource, cityRequests);
+        super(context, 0, cityRequests);
         this.mContext = context;
         this.mLayoutResourceId = resource;
-        this.mCityRequests = new ArrayList<>(cityRequests);
+        this.mCityRequests = cityRequests;
         this.mCityRequestListAll = new ArrayList<>(cityRequests);
+        this.mCityRequestSuggestion = new ArrayList<>();
+        appSharedPreference = AppSharedPreference.getAppSharedPreference(context);
     }
 
     public int getCount() {
@@ -51,54 +58,61 @@ public class CityAdapter extends ArrayAdapter<CityRequest> implements Filterable
             }
             CityRequest cityRequest = getItem(position);
             TextView name = (TextView) convertView.findViewById(R.id.text_spinner);
-            name.setText(cityRequest.getCityName());
+            if(cityRequest != null) {
+                name.setText(cityRequest.getCityName());
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return convertView;
     }
 
+    @NonNull
     @Override
     public Filter getFilter() {
-        return new Filter() {
-            @Override
-            public String convertResultToString(Object resultValue) {
-                return ((CityRequest) resultValue).getCityName();
-            }
-
-            @Override
-            protected FilterResults performFiltering(CharSequence constraint) {
-                FilterResults filterResults = new FilterResults();
-                List<CityRequest> cityRequestSuggestion = new ArrayList<>();
-                if (constraint != null) {
-                    for (CityRequest cityRequest : mCityRequestListAll) {
-                        if (cityRequest.getCityName().toLowerCase().startsWith(constraint.toString().toLowerCase())) {
-                            cityRequestSuggestion.add(cityRequest);
-                        }
-                    }
-                    filterResults.values = cityRequestSuggestion;
-                    filterResults.count = cityRequestSuggestion.size();
-                }
-                return filterResults;
-            }
-
-            @Override
-            protected void publishResults(CharSequence constraint, FilterResults results) {
-                mCityRequests.clear();
-                if (results != null && results.count > 0) {
-                    // avoids unchecked cast warning when using mDepartments.addAll((ArrayList<Department>) results.values);
-                    for (Object object : (List<?>) results.values) {
-                        if (object instanceof CityRequest) {
-                            mCityRequests.add((CityRequest) object);
-                        }
-                    }
-                    notifyDataSetChanged();
-                } else if (constraint == null) {
-                    // no filter, add entire original list back in
-                    mCityRequests.addAll(mCityRequestListAll);
-                    notifyDataSetInvalidated();
-                }
-            }
-        };
+        return cityFilter;
     }
+
+    private Filter cityFilter = new Filter() {
+        @Override
+        public CharSequence convertResultToString(Object resultValue) {
+            CityRequest cityRequest = (CityRequest) resultValue;
+            return cityRequest.getCityName();
+        }
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            if (charSequence != null) {
+                mCityRequestSuggestion.clear();
+                for (CityRequest cityRequest : mCityRequestListAll) {
+                    if (cityRequest.getCityName().toLowerCase().startsWith(charSequence.toString().toLowerCase())) {
+                        mCityRequestSuggestion.add(cityRequest);
+                    }
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = mCityRequestSuggestion;
+                filterResults.count = mCityRequestSuggestion.size();
+                return filterResults;
+            } else {
+                return new FilterResults();
+            }
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            ArrayList<CityRequest> tempValues = (ArrayList<CityRequest>) filterResults.values;
+            if (filterResults != null && filterResults.count > 0) {
+                clear();
+                for (CityRequest cityObj : tempValues) {
+                    add(cityObj);
+                }
+                notifyDataSetChanged();
+            } else {
+                clear();
+                for (CityRequest cityObj : mCityRequestListAll) {
+                    add(cityObj);
+                }
+                notifyDataSetChanged();
+            }
+        }
+    };
 }

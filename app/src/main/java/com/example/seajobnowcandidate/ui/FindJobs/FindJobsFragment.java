@@ -1,5 +1,6 @@
 package com.example.seajobnowcandidate.ui.FindJobs;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.seajobnowcandidate.Activity.FindJobActivity;
 import com.example.seajobnowcandidate.databinding.FragmentFindJobsBinding;
 import com.example.seajobnowcandidate.ui.PostJob.PostJobFragment;
 import com.example.seajobnowcandidate.ui.RecentSearch.RecentSearchFragment;
@@ -43,6 +45,14 @@ public class FindJobsFragment extends Fragment {
         setupViewPager(fragmentFindJobsBinding.viewpager);
 
         fragmentFindJobsBinding.tabs.setupWithViewPager(fragmentFindJobsBinding.viewpager);
+
+        fragmentFindJobsBinding.etsearchView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), FindJobActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return fragmentFindJobsBinding.getRoot();
     }

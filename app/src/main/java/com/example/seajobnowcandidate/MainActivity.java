@@ -2,49 +2,64 @@ package com.example.seajobnowcandidate;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import com.example.seajobnowcandidate.Activity.LoginActivity;
-import com.example.seajobnowcandidate.Session.AppSharedPreference;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.navigation.NavigationView;
+import android.widget.Toolbar;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.Request;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.target.SizeReadyCallback;
+import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.transition.Transition;
+import com.example.seajobnowcandidate.Activity.LoginActivity;
+import com.example.seajobnowcandidate.Session.AppSharedPreference;
 import com.example.seajobnowcandidate.databinding.ActivityMainBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.button.MaterialButton;
+import com.squareup.picasso.Picasso;
+
+import javax.security.auth.callback.UnsupportedCallbackException;
 
 public class MainActivity extends AppCompatActivity {
+    AppSharedPreference appSharedPreference;
+    Toolbar toolbar;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-    AppSharedPreference appSharedPreference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
         appSharedPreference = AppSharedPreference.getAppSharedPreference(this);
-        /*binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-        DrawerLayout drawer = binding.drawerLayout;
+
+        /*DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                 R.id.nav_find_jobs, R.id.nav_test/*, R.id.nav_slideshow*/)
+                 R.id.nav_find_jobs, R.id.nav_test*//*, R.id.nav_slideshow*//*)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -59,22 +74,63 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 showBottomSheetDialog();
             }
-        });
+        });*/
+
+        // handle navigation selection
+        //Initialize Bottom Navigation View.
+        BottomNavigationView navView = findViewById(R.id.bottom_navigation_view);
+
+        //Pass the ID's of Different destinations
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_home, R.id.nav_find_jobs, R.id.nav_my_jobs, R.id.nav_proifle)
+                .build();
+
+        //Initialize NavController.
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(navView, navController);
 
         /*
          * Call this function whenever you want to check user login
          * This will redirect user to LoginActivity is he is not
          * logged in
          **/
+        String tempUrl = "https://cdn-icons-png.flaticon.com/512/147/147144.png";
+        /*Glide.with(getApplicationContext()).asBitmap()
+                .load(tempUrl)
+                .into(new CustomTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                        Drawable profileImage = new BitmapDrawable(getResources(), resource);
+                        try {
+                            navView.getMenu().getItem(R.id.nav_proifle).setIcon(R.drawable.ic_baseline_person_outline);
+                        }catch (Exception e){
+                            e.getStackTrace();
+                            Log.e("exception",e.getMessage());
+                        }
+                    }
+
+                    @Override
+                    public void onLoadCleared(@Nullable Drawable placeholder) {
+
+                    }
+                });*/
+
         appSharedPreference.checkLogin(this);
 
     }
+
+    public Toolbar getNav() {
+        return toolbar;
+    }
+
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -84,13 +140,13 @@ public class MainActivity extends AppCompatActivity {
             // System.out.println("Potrait");
         }
     }
+
     private void showBottomSheetDialog() {
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         bottomSheetDialog.setContentView(R.layout.logout_bottom_sheet);
 
         MaterialButton logout_yes = bottomSheetDialog.findViewById(R.id.btn_logout_yes);
         MaterialButton logout_no = bottomSheetDialog.findViewById(R.id.btn_logout_no);
-
 
 
         logout_yes.setOnClickListener(new View.OnClickListener() {

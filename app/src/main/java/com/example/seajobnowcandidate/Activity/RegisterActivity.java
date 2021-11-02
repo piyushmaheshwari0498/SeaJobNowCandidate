@@ -5,6 +5,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,9 +26,10 @@ import com.example.seajobnowcandidate.Entity.response.CitySpinnerResponse;
 import com.example.seajobnowcandidate.Entity.response.RegisterResponse;
 import com.example.seajobnowcandidate.Interface.ApiInterface;
 import com.example.seajobnowcandidate.R;
+import com.example.seajobnowcandidate.Utils.Constants;
 import com.example.seajobnowcandidate.Utils.Custom_Toast;
 import com.example.seajobnowcandidate.Utils.InternetConnection;
-import com.example.seajobnowcandidate.Utils.RetrofitBuilder;
+import com.example.seajobnowcandidate.Entity.RetrofitBuilder;
 import com.example.seajobnowcandidate.databinding.ActivityRegisterBinding;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -54,11 +57,12 @@ public class RegisterActivity extends AppCompatActivity {
     CityAdapter customCityAdapter2;
     StateAdapter stateAdapter2;
     CountryAdapter countryAdapter2;
-    String selectedindosNoRadioButton,selectedcdcRadioButton;
+    String selectedRadioButtonFlag = Constants.indosFlag;
     private List<CityRequest> cityRequestList;
     private List<StateRequest> stateRequestList;
     private List<CountryRequest> countryRequestList;
     InternetConnection internetConnection;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +70,27 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(activityRegisterBinding.getRoot());
         ringProgressDialog = new ProgressDialog(RegisterActivity.this);
         internetConnection=new InternetConnection();
+
+        //For Capital Letters
+        InputFilter toUpperCaseFilter = new InputFilter() {
+            public CharSequence filter(CharSequence source, int start, int end,
+                                       Spanned dest, int dstart, int dend) {
+
+                StringBuilder stringBuilder = new StringBuilder();
+
+                for (int i = start; i < end; i++) {
+                    Character character = source.charAt(i);
+                    character = Character.toUpperCase(character); // THIS IS UPPER CASING
+                    stringBuilder.append(character);
+
+                }
+                return stringBuilder.toString();
+            }
+
+        };
+        activityRegisterBinding.inputIndosno.setFilters(new InputFilter[] { toUpperCaseFilter });
+
+        activityRegisterBinding.inputLayoutIndosno.setHint(R.string.hint_indos_no);
 
         activityRegisterBinding.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -76,12 +101,14 @@ public class RegisterActivity extends AppCompatActivity {
                         if (activityRegisterBinding.indosNoRadioButton.isChecked()) {
                            // Toast.makeText(getApplicationContext(), activityRegisterBinding.indosNoRadioButton.getText().toString()+"indosNoRadioButton is selected", Toast.LENGTH_SHORT).show();
                             activityRegisterBinding.inputLayoutIndosno.setHint(R.string.hint_indos_no);
+                            selectedRadioButtonFlag = Constants.indosFlag;
                         }
                         break;
                     case R.id.cdcRadioButton:
                         if (activityRegisterBinding.cdcRadioButton.isChecked()) {
                            // Toast.makeText(getApplicationContext(), activityRegisterBinding.cdcRadioButton.getText().toString()+"cdcRadioButton is selected", Toast.LENGTH_SHORT).show();
                             activityRegisterBinding.inputLayoutIndosno.setHint(R.string.cdc_number);
+                            selectedRadioButtonFlag = Constants.cdcFlag;
                         }
                         break;
                 }
@@ -132,12 +159,12 @@ public class RegisterActivity extends AppCompatActivity {
         activityRegisterBinding.textLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!internetConnection.checkConnection(getApplicationContext())) {
+               /* if (!internetConnection.checkConnection(getApplicationContext())) {
                     Custom_Toast.warning(RegisterActivity.this, getString(R.string.no_internet));
-                } else {
+                } else {*/
                     Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(i);
-                }
+//                }
             }
         });
 
@@ -157,21 +184,15 @@ public class RegisterActivity extends AppCompatActivity {
                         customCityAdapter2 = new CityAdapter(RegisterActivity.this, R.layout.custom_spinner_item, cityRequestList);
                         activityRegisterBinding.spnCity.setThreshold(1);
                         activityRegisterBinding.spnCity.setAdapter(customCityAdapter2);
-                        for (int i = 0; i < cityRequestList.size(); i++) {
-                            if (cityname != null) {
-                                if (cityname.equals(cityRequestList.get(i).getCityName())) {
-                                    activityRegisterBinding.spnCity.setText(cityRequestList.get(i).getCityName());
-                                    activityRegisterBinding.spnCity.setSelection(i);
-                                }
-                            }
-                        }
+
                         activityRegisterBinding.spnCity.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
-                                Log.e("cityId", cityRequestList.get(pos).getCityId());
-                                selectedCityId = cityRequestList.get(pos).getCityId();
-                                selectedCityName = cityRequestList.get(pos).getCityName();
-                                activityRegisterBinding.spnCity.setText(selectedCityName);
+                                CityRequest cityRequest = (CityRequest) adapterView.getItemAtPosition(pos);
+                                selectedCityId = cityRequest.getCityId();
+                                selectedCityName = cityRequest.getCityName();
+                                Log.e("cityId", selectedCityId);
+                                Log.e("cityName", selectedCityName);
                             }
                         });
 
@@ -180,19 +201,15 @@ public class RegisterActivity extends AppCompatActivity {
                         stateAdapter2 = new StateAdapter(RegisterActivity.this, R.layout.custom_spinner_item, stateRequestList);
                         activityRegisterBinding.spnState.setThreshold(1);
                         activityRegisterBinding.spnState.setAdapter(stateAdapter2);
-                        for (int i = 0; i < stateRequestList.size(); i++) {
-                            if (statename != null) {
-                                if (statename.equals(stateRequestList.get(i).getStateName())) {
-                                    activityRegisterBinding.spnState.setText(stateRequestList.get(i).getStateName());
-                                }
-                            }
-                        }
+
                         activityRegisterBinding.spnState.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
-                                selectedStateId = stateRequestList.get(pos).getStateId();
-                                selectedStateName = stateRequestList.get(pos).getStateName();
-                                activityRegisterBinding.spnState.setText(selectedStateName);
+                                StateRequest stateRequest = (StateRequest) adapterView.getItemAtPosition(pos);
+                                selectedStateId = stateRequest.getStateId();
+                                selectedStateName = stateRequest.getStateName();
+                                Log.e("stateId", selectedStateId);
+                                Log.e("stateName", selectedStateName);
                             }
                         });
 
@@ -202,19 +219,15 @@ public class RegisterActivity extends AppCompatActivity {
                         countryAdapter2 = new CountryAdapter(RegisterActivity.this, R.layout.custom_spinner_item, countryRequestList);
                         activityRegisterBinding.spnCountry.setThreshold(1);
                         activityRegisterBinding.spnCountry.setAdapter(countryAdapter2);
-                        for (int i = 0; i < countryRequestList.size(); i++) {
-                            if (countryname != null) {
-                                if (countryname.equals(countryRequestList.get(i).getCountryName())) {
-                                    activityRegisterBinding.spnCountry.setText(countryRequestList.get(i).getCountryName());
-                                }
-                            }
-                        }
+
                         activityRegisterBinding.spnCountry.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
-                                selectedCountryId = countryRequestList.get(pos).getCountryId();
-                                selectedCountryName = countryRequestList.get(pos).getCountryName();
-                                activityRegisterBinding.spnCountry.setText(selectedCountryName);
+                                CountryRequest countryRequest = (CountryRequest) adapterView.getItemAtPosition(pos);
+                                selectedCountryId = countryRequest.getCountryId();
+                                selectedCountryName = countryRequest.getCountryName();
+                                Log.e("countryId", selectedCountryId);
+                                Log.e("countryName", selectedCountryName);
                             }
                         });
                     }
@@ -262,6 +275,7 @@ public class RegisterActivity extends AppCompatActivity {
                         ringProgressDialog.dismiss();
                         String msg=response.body().getMessage();
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+                        finish();
                     }
                 } else {
                     if (response.code() == 404 && response.message().equals("Not Found")) {
@@ -326,6 +340,7 @@ public class RegisterActivity extends AppCompatActivity {
         map.put("pincode", pincode);
         map.put("password", password);
         map.put("confirm_password", confirm_password);
+        map.put("sc_cand_register_flag", selectedRadioButtonFlag);
         return map;
     }
 

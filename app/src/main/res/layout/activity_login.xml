@@ -79,7 +79,7 @@
             app:hintAnimationEnabled="true"
             app:hintTextColor="@color/black"
             app:startIconDrawable="@drawable/ic_baseline_person_outline"
-            app:startIconTint="@color/darkgrey">
+            app:startIconTint="@color/dark_grey">
          <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_indosno"
                 android:layout_width="match_parent"
@@ -90,6 +90,7 @@
                 android:singleLine="true"
                 android:textAllCaps="true"
                 android:hint="@string/hint_indos_no"
+             android:text="SJNA001"
                 android:textColor="@color/black"
                 android:textSize="@dimen/large" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -117,7 +118,7 @@
             app:hintAnimationEnabled="true"
             app:hintTextColor="@color/black"
             app:startIconDrawable="@drawable/ic_lock"
-            app:startIconTint="@color/darkgrey">
+            app:startIconTint="@color/dark_grey">
             <!--  android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_password"
@@ -128,21 +129,11 @@
                 android:imeOptions="actionGo"
                 android:inputType="textPassword|textNoSuggestions"
                 android:textColor="@color/black"
-                android:textSize="@dimen/large" />
+                android:textSize="@dimen/large"
+                android:text="1"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/btn_forgot_pwd"
-            style="@style/MediumTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginStart="13dp"
-            android:layout_marginEnd="13dp"
-            android:gravity="end"
-            android:padding="5dp"
-            android:text="@string/forgot_password"
-            android:textColor="@color/blue_500" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_login"
@@ -156,6 +147,19 @@
             android:textColor="@color/white"
             app:cornerRadius="5dp"
             tools:text="login" />
+
+        <TextView
+            android:id="@+id/btn_forgot_pwd"
+            style="@style/MediumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:gravity="end"
+            android:padding="5dp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/blue_500" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_register"

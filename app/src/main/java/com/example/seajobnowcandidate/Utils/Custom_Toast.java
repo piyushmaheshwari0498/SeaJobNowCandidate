@@ -38,7 +38,7 @@ public class Custom_Toast {
     }
 
     public static void info(Context context, String message){
-        Toast toast = Toasty.custom(context,message, R.drawable.ic_info_outline_white_24dp, R.color.yellow,Toast.LENGTH_LONG,true,true);
+        Toast toast = Toasty.custom(context,message, R.drawable.ic_info_outline_white_24dp, R.color.yellow_400,Toast.LENGTH_LONG,true,true);
         toast.setGravity(Gravity.CENTER, 1, 1);
         toast.show();
     }

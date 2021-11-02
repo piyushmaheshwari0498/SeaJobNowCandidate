@@ -4,27 +4,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_find_jobs">
+    app:startDestination="@+id/nav_home">
 
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.seajobnowcandidate.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/home_fragment" />
     <fragment
         android:id="@+id/nav_find_jobs"
-        android:name="com.example.seajobnowcandidate.ui.FindJobs.FindJobsFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_find_jobs" />
+        android:name="com.example.seajobnowcandidate.ui.PostJob.PostJobFragment"
+        android:label="Find Jobs"
+        tools:layout="@layout/fragment_postjob" />
     <fragment
-        android:id="@+id/nav_test"
-        android:name="com.example.seajobnowcandidate.TestSpinner.SpinnerFragment"
-        android:label="Test"
-        tools:layout="@layout/fragment_spinner" />
-  <!--  <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.seajobnowcandidate.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_my_jobs"
+        android:name="com.example.seajobnowcandidate.ui.myjobs.MyJobFragment"
+        android:label="@string/menu_jobs"
+        tools:layout="@layout/my_job_fragment" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.seajobnowcandidate.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />-->
+        android:id="@+id/nav_proifle"
+        android:name="com.example.seajobnowcandidate.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/profile_fragment" />
 </navigation>

@@ -3,6 +3,8 @@ package com.example.seajobnowcandidate.Utils;
 public class Constants {
      public static final String SHARED_PREFRENCE_NAME = "AppData";
      public static final String IS_LOGGED_IN = "login";
+     public static final String indosFlag = "0";
+     public static final String cdcFlag = "1";
      public static final int RESPONSE_CODE = 200;// http response code
      public static final int RESPONSE_CODE1 = 201;// http response code
      public static final int RESPONSE_CODE_UNAUTHORISED = 203;// http response code

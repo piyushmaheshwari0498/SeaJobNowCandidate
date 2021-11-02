@@ -16,6 +16,10 @@
         android:theme="@style/Theme.SeaJobNowCandidate"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Activity.FindJobActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SeaJobNowCandidate.NoActionBar" />
+        <activity
             android:name=".Activity.PostDetailsActivity"
             android:exported="true"
             android:theme="@style/Theme.SeaJobNowCandidate.NoActionBar" />

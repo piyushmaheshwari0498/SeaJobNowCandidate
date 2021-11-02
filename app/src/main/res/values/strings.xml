@@ -14,7 +14,7 @@
     <string name="btn_sign_in">Sign In</string>
     <string name="powered_by_interlink_consultant"><b>Powered By</b> Interlink Consultant</string>
     <string name="no_internet">Please Check Internet Connection</string>
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Dashboard</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="err_msg_name">Enter your Indos Number</string>
@@ -79,4 +79,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cdc_number">CDC Number</string>
+    <string name="menu_jobs">My Jobs</string>
+    <string name="menu_profile">Profile</string>
+    <string name="trading_area">Trading Area</string>
+    <string name="vessel_type">Vessel Type</string>
+    <string name="rank_type">Rank</string>
+    <string name="department_type">Department</string>
+    <string name="salary_range">Expected Salary</string>
+    <string name="basic_info">Basic Info</string>
 </resources>

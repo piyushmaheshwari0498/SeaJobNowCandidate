@@ -20,12 +20,14 @@ import java.util.List;
 public class PostJobsAdapter extends RecyclerView.Adapter<PostJobsAdapter.MyView> {
     private List<PostJobs> list;
     Context context;
+    int rosourceId;
 
     // Constructor for adapter class
     // which takes a list of String type
-    public PostJobsAdapter(Context context, List<PostJobs> horizontalList) {
+    public PostJobsAdapter(Context context, List<PostJobs> horizontalList,int resourceId) {
         this.context = context;
         this.list = horizontalList;
+        this.rosourceId = resourceId;
     }
 
     // Override onCreateViewHolder which deals
@@ -35,7 +37,7 @@ public class PostJobsAdapter extends RecyclerView.Adapter<PostJobsAdapter.MyView
     public MyView onCreateViewHolder(ViewGroup parent, int viewType) {
 
         // Inflate item.xml using LayoutInflator
-      View itemView=LayoutInflater.from(parent.getContext()).inflate(R.layout.postjobs_items, parent, false);
+      View itemView=LayoutInflater.from(parent.getContext()).inflate(rosourceId, parent, false);
 
         // return itemView
         return new MyView(itemView);

@@ -1,4 +1,5 @@
-package com.example.seajobnowcandidate.Utils;
+package com.example.seajobnowcandidate.Entity;
+import com.example.seajobnowcandidate.Utils.Defines;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.concurrent.TimeUnit;
@@ -19,8 +20,9 @@ public class RetrofitBuilder {
             httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.HEADERS);
 
             okHttpClient = new OkHttpClient.Builder()
-                     .readTimeout(Defines.READ_TIME_OUT, TimeUnit.MILLISECONDS)
-                    .connectTimeout(Defines.WRITE_TIME_OUT, TimeUnit.MILLISECONDS)
+                     .readTimeout(30, TimeUnit.SECONDS)
+                     .writeTimeout(30, TimeUnit.SECONDS)
+                    .connectTimeout(300, TimeUnit.MILLISECONDS)
 //                    .addNetworkInterceptor(new StethoInterceptor())
                     .addInterceptor(httpLoggingInterceptor)
                     .build();

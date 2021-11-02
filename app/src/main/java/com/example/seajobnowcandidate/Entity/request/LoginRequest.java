@@ -28,10 +28,21 @@ public class LoginRequest {
     @SerializedName("last_name")
     @Expose
     private String lastName;
+    @SerializedName("sc_pemail")
+    @Expose
+    private String sc_pemail;
 
     @SerializedName("acceess_key")
     @Expose
     private String acceessKey;
+
+    public String getSc_pemail() {
+        return sc_pemail;
+    }
+
+    public void setSc_pemail(String sc_pemail) {
+        this.sc_pemail = sc_pemail;
+    }
 
     public String getScId() {
         return scId;
@@ -104,4 +115,19 @@ public class LoginRequest {
         this.scCandLoginFlag = scCandLoginFlag;
     }
 
+    @Override
+    public String toString() {
+        return "LoginRequest{" +
+                "apiAccessKey='" + apiAccessKey + '\'' +
+                ", scUsername='" + scUsername + '\'' +
+                ", scPassword='" + scPassword + '\'' +
+                ", scCandLoginFlag='" + scCandLoginFlag + '\'' +
+                ", scId='" + scId + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", sc_pemail='" + sc_pemail + '\'' +
+                ", acceessKey='" + acceessKey + '\'' +
+                '}';
+    }
 }

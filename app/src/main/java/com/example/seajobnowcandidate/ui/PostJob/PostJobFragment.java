@@ -1,6 +1,7 @@
 package com.example.seajobnowcandidate.ui.PostJob;
 import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.example.seajobnowcandidate.Activity.FindJobActivity;
 import com.example.seajobnowcandidate.Adapter.DepartmentAdapter;
 import com.example.seajobnowcandidate.Adapter.PostJobsAdapter;
 import com.example.seajobnowcandidate.Adapter.RankAdapter;
@@ -33,7 +36,7 @@ import com.example.seajobnowcandidate.Interface.ApiInterface;
 import com.example.seajobnowcandidate.Model.PostJobs;
 import com.example.seajobnowcandidate.R;
 import com.example.seajobnowcandidate.Utils.InternetConnection;
-import com.example.seajobnowcandidate.Utils.RetrofitBuilder;
+import com.example.seajobnowcandidate.Entity.RetrofitBuilder;
 import com.example.seajobnowcandidate.databinding.FragmentPostjobBinding;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -106,6 +109,13 @@ public class PostJobFragment extends Fragment {
 
         binding = FragmentPostjobBinding.inflate(inflater, container, false);
 
+        binding.etsearchView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), FindJobActivity.class);
+                startActivity(intent);
+            }
+        });
 
         AddItemsToRecyclerViewArrayList();
 
@@ -114,7 +124,7 @@ public class PostJobFragment extends Fragment {
         // Set LayoutManager on Recycler View
         binding.rvPostedJobs.setLayoutManager(RecyclerViewLayoutManager);
 
-        adapter = new PostJobsAdapter(getContext(),source);
+        adapter = new PostJobsAdapter(getContext(),source,R.layout.postjobs_items);
         binding.rvPostedJobs.setAdapter(adapter);
 
 
@@ -130,12 +140,6 @@ public class PostJobFragment extends Fragment {
         binding.retryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                refreshItems();
-            }
-        });
-        binding.swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
                 refreshItems();
             }
         });
@@ -179,7 +183,7 @@ public class PostJobFragment extends Fragment {
         // Update the adapter and notify data set changed
         // Stop refresh animation
 
-        binding.swipeRefreshLayout.setRefreshing(false);
+//        binding.swipeRefreshLayout.setRefreshing(false);
     }
 
     public void no_internet() {

@@ -19,7 +19,7 @@ import com.example.seajobnowcandidate.Interface.ApiInterface;
 import com.example.seajobnowcandidate.R;
 import com.example.seajobnowcandidate.Utils.Custom_Toast;
 import com.example.seajobnowcandidate.Utils.InternetConnection;
-import com.example.seajobnowcandidate.Utils.RetrofitBuilder;
+import com.example.seajobnowcandidate.Entity.RetrofitBuilder;
 import com.example.seajobnowcandidate.databinding.ActivityVerifyBinding;
 
 import org.json.JSONException;
