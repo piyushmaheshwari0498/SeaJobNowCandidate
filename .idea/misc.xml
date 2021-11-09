@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/drawable/asl_checkable_expandcollapse.xml" value="0.2890625" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/drawable/avatar_1.xml" value="0.2890625" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/drawable/circle.xml" value="0.2890625" />
+        <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/drawable/ic_baseline_error_outline.xml" value="0.2890625" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/drawable/ic_baseline_person_outline.xml" value="0.15885416666666666" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/drawable/ic_lock.xml" value="0.15885416666666666" />
+        <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/activity_confirm_password.xml" value="0.27291666666666664" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/activity_find_job.xml" value="0.27291666666666664" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/activity_find_job_result.xml" value="0.27291666666666664" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
@@ -15,6 +18,7 @@
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/app_bar_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/content_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/custom_spinner_item.xml" value="0.27291666666666664" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/fragment_find_jobs.xml" value="0.27291666666666664" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/fragment_home.xml" value="0.27291666666666664" />
         <entry key="..\:/Android/SeaJobNowCandidate/app/src/main/res/layout/fragment_postjob.xml" value="0.27291666666666664" />

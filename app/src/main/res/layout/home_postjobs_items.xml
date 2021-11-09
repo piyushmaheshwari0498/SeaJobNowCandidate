@@ -10,7 +10,7 @@
     android:orientation="vertical"
     card_view:cardCornerRadius="15dp"
     card_view:cardElevation="8dp"
-    card_view:contentPadding="8dp"
+    card_view:contentPadding="5dp"
     android:focusable="true">
 
     <LinearLayout
@@ -40,9 +40,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/google" />
 
@@ -54,6 +53,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="start"
+                    android:paddingStart="5dp"
                     android:text="Ui/Ux Designer"
                     android:textColor="@color/blue_500" />
             </LinearLayout>
@@ -63,28 +63,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_ho"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingStart="2dp"
+                android:paddingTop="5dp"
+                >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="@string/rupee_icon"
-                    android:textSize="24sp" />
+                    android:scaleType="centerInside"
+                    android:src="@drawable/rupee" />
 
                 <TextView
                     android:id="@+id/job_salary"
                     style="@style/MediumTextView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/job_title"
                     android:layout_gravity="center"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginEnd="2dp"
                     android:gravity="start|center"
-                    android:padding="5dp"
+                    android:paddingStart="5dp"
                     android:text="₹10000 - ₹20000 per hour" />
             </LinearLayout>
 
@@ -92,21 +90,20 @@
                 android:id="@+id/ll_combine1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:visibility="visible"
-                android:layout_below="@+id/ll_salary"
-                android:orientation="horizontal">
+                android:layout_below="@id/ll_salary"
+                android:orientation="horizontal"
+                android:paddingStart="2dp"
+                android:paddingTop="5dp">
 
                 <LinearLayout
                     android:id="@+id/ll_location"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_baseline_location_on_24" />
@@ -114,11 +111,11 @@
                     <TextView
                         android:id="@+id/textview_location"
                         style="@style/MediumTextView"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
                         android:gravity="start"
-                        android:padding="5dp"
+                        android:paddingStart="5dp"
                         android:text="Indian ocean"
                         android:textColor="@color/grey"
                         android:textSize="16sp" />
@@ -263,7 +260,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/black" />
+                    android:background="@color/light_grey" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

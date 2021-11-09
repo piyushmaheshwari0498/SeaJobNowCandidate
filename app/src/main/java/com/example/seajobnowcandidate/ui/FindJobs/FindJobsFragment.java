@@ -11,15 +11,21 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.seajobnowcandidate.Activity.FindJobActivity;
+import com.example.seajobnowcandidate.R;
 import com.example.seajobnowcandidate.databinding.FragmentFindJobsBinding;
 import com.example.seajobnowcandidate.ui.PostJob.PostJobFragment;
 import com.example.seajobnowcandidate.ui.RecentSearch.RecentSearchFragment;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipDrawable;
+import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,16 +36,21 @@ public class FindJobsFragment extends Fragment {
     FragmentFindJobsBinding fragmentFindJobsBinding;
 
     FindJobViewModel findJobViewModel;
+
+    public FindJobsFragment() {
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         fragmentFindJobsBinding= FragmentFindJobsBinding.inflate(getLayoutInflater(), container, false);
         findJobViewModel = new ViewModelProvider(this).get(FindJobViewModel.class);
         setupViewPager(fragmentFindJobsBinding.viewpager);
@@ -54,8 +65,20 @@ public class FindJobsFragment extends Fragment {
             }
         });
 
+       //if(!title.isEmpty()){
+        /*findJobViewModel.getSelectedItem().observe(getActivity(), item -> {
+            // Perform an action with the latest item data
+            Log.d("itemTitle",item);
+            fragmentFindJobsBinding.etsearchView.setText(item);
+        });*/
+
+
+
+       // }
         return fragmentFindJobsBinding.getRoot();
     }
+
+
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new PostJobFragment(), "Job feed");

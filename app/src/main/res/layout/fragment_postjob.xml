@@ -38,6 +38,23 @@
 
             </LinearLayout>
 
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/entry_chip_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    style="@style/Widget.MaterialComponents.Chip.Entry"
+                    android:checkable="false"
+                    app:closeIconEnabled="true"
+                    app:iconStartPadding="5dp"/>
+            </com.google.android.material.chip.ChipGroup>
+
             <LinearLayout
                 android:id="@+id/ll_Data_Found"
                 android:layout_width="match_parent"

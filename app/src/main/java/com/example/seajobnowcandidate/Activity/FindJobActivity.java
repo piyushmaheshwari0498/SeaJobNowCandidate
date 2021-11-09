@@ -1,38 +1,26 @@
 package com.example.seajobnowcandidate.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
-import com.example.seajobnowcandidate.Adapter.PostJobsAdapter;
-import com.example.seajobnowcandidate.Model.PostJobs;
-import com.example.seajobnowcandidate.R;
-import com.example.seajobnowcandidate.databinding.ActivityFindJobBinding;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
-import java.util.ArrayList;
+import com.example.seajobnowcandidate.databinding.ActivityFindJobBinding;
+import com.example.seajobnowcandidate.ui.FindJobs.FindJobViewModel;
+import com.example.seajobnowcandidate.ui.PostJob.PostJobFragment;
 
 public class FindJobActivity extends AppCompatActivity {
 
+    FindJobViewModel viewModel;
     ActivityFindJobBinding binding;
-    // Array list for recycler view data source
-    ArrayList<PostJobs> source;
-
-    // adapter class object
-    PostJobsAdapter adapter;
-
-    // Linear Layout Manager
-    LinearLayoutManager linearLayoutManager;
-
-    // Layout Manager
-    RecyclerView.LayoutManager RecyclerViewLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        viewModel = new ViewModelProvider(this).get(FindJobViewModel.class);
 
         binding = ActivityFindJobBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -47,28 +35,17 @@ public class FindJobActivity extends AppCompatActivity {
         binding.btnSearchJob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AddItemsToRecyclerViewArrayList();
-                RecyclerViewLayoutManager = new LinearLayoutManager(FindJobActivity.this);
-
-                // Set LayoutManager on Recycler View
-                binding.searchedJobsRv.setLayoutManager(RecyclerViewLayoutManager);
-
-                adapter = new PostJobsAdapter(FindJobActivity.this,source,R.layout.postjobs_items);
-                binding.searchedJobsRv.setAdapter(adapter);
+                Bundle bundle = new Bundle();
+                bundle.putString("title", binding.etJobTitle.getText().toString());
+                PostJobFragment fragobj = new PostJobFragment();
+                fragobj.setArguments(bundle);
+                Log.d("ACTitemTitle", binding.etJobTitle.getText().toString());
+                // viewModel.selectItem(binding.etJobTitle.getText().toString());
+                finish();
             }
         });
 
 
-    }
-
-    public void AddItemsToRecyclerViewArrayList()
-    {
-        // Adding items to ArrayList
-        source = new ArrayList<>();
-        source.add(new PostJobs("UI/UX Designer","Enginer","Master","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
-        source.add(new PostJobs("Kitchen Jr. Chef","Hotel","Chef","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
-        source.add(new PostJobs("Engine","Enginer","Master","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
-        source.add(new PostJobs("UI/UX Designer","Enginer","Master","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
     }
 
 }

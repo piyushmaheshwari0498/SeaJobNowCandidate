@@ -87,4 +87,5 @@
     <string name="department_type">Department</string>
     <string name="salary_range">Expected Salary</string>
     <string name="basic_info">Basic Info</string>
+    <string name="job_title">Job Tilte</string>
 </resources>

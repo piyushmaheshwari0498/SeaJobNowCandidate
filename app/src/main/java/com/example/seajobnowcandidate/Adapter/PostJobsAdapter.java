@@ -8,26 +8,32 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.seajobnowcandidate.Activity.PostDetailsActivity;
-import com.example.seajobnowcandidate.Model.PostJobs;
+import com.example.seajobnowcandidate.Entity.request.PostJobDetailsRequest;
 import com.example.seajobnowcandidate.R;
-import com.example.seajobnowcandidate.actions.ShowSnackbar;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class PostJobsAdapter extends RecyclerView.Adapter<PostJobsAdapter.MyView> {
-    private List<PostJobs> list;
+
+    private List<PostJobDetailsRequest> list;
     Context context;
-    int rosourceId;
+    DateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
 
     // Constructor for adapter class
     // which takes a list of String type
-    public PostJobsAdapter(Context context, List<PostJobs> horizontalList,int resourceId) {
+    int resourceId;
+    public PostJobsAdapter(Context context, List<PostJobDetailsRequest> horizontalList,int resourceId) {
         this.context = context;
         this.list = horizontalList;
-        this.rosourceId = resourceId;
+        this.resourceId = resourceId;
     }
 
     // Override onCreateViewHolder which deals
@@ -37,7 +43,12 @@ public class PostJobsAdapter extends RecyclerView.Adapter<PostJobsAdapter.MyView
     public MyView onCreateViewHolder(ViewGroup parent, int viewType) {
 
         // Inflate item.xml using LayoutInflator
-      View itemView=LayoutInflater.from(parent.getContext()).inflate(rosourceId, parent, false);
+        View itemView
+                = LayoutInflater
+                .from(parent.getContext())
+                .inflate(resourceId,
+                        parent,
+                        false);
 
         // return itemView
         return new MyView(itemView);
@@ -55,25 +66,39 @@ public class PostJobsAdapter extends RecyclerView.Adapter<PostJobsAdapter.MyView
         // Set the text of each item of
         // Recycler view with the list items
 //        holder.cardView.setBackgroundColor(context.getColor(list.get(position).getColor()));
-        holder.textView.setText(list.get(position).getJob_title());
-        holder.textViewlocation.setText(list.get(position).getLocation());
-        holder.textViewrank.setText(list.get(position).getRank());
-        holder.textViewdepartment.setText(list.get(position).getDepartment());
-        holder.textViewship.setText(list.get(position).getShip_type());
-        holder.textViewslary.setText(list.get(position).getSalary());
-        holder.textViewdate.setText(list.get(position).getStart_date());
+        String title = list.get(position).getCjmRank() +" - "+list.get(position).getCjmPostName();
+        String postedDate = "Posted : "+ list.get(position).getCjmStartDate();
+        String exp = list.get(position).getCjmExperienceInMonths()+" Months";
+        holder.textView.setText(title);
+        holder.textViewlocation.setText(list.get(position).getCjmJobLocation());
+        holder.textViewrank.setText(list.get(position).getCjmRank());
+        holder.textViewdepartment.setText(list.get(position).getCjmDepartment());
+        holder.textViewship.setText(list.get(position).getCjmVesselType());
+        holder.textViewexpirydate.setText(list.get(position).getCjmExpiryDate());
+        holder.textViewdate.setText(postedDate);
+        holder.textViewexpirence.setText(exp);
+
+        if(list.get(position).getCjmSalary() != null)
+            holder.textViewslary.setText(list.get(position).getCjmSalary());
+        else
+            holder.textViewslary.setVisibility(View.GONE);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new ShowSnackbar().shortSnackbar(view,list.get(position).getJob_title());
+               // new ShowSnackbar().shortSnackbar(view,list.get(position).getJob_title());
                 Intent intent= new Intent(context, PostDetailsActivity.class);
-                intent.putExtra("post_title",list.get(position).getJob_title());
+                intent.putExtra("post_title",list.get(position).getCjmPostName());
+                intent.putExtra("post_id",list.get(position).getCjmId());
                 context.startActivity(intent);
 
             }
         });
+
+
+
     }
+
 
     // Override getItemCount which Returns
     // the length of the RecyclerView.

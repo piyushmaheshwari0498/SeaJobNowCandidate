@@ -89,7 +89,7 @@ public class SalaryAdapter extends ArrayAdapter<SalaryRequest> implements Filter
                 if (results != null && results.count > 0) {
                     // avoids unchecked cast warning when using mDepartments.addAll((ArrayList<Department>) results.values);
                     for (Object object : (List<?>) results.values) {
-                        if (object instanceof CityRequest) {
+                        if (object instanceof SalaryRequest) {
                             mSalaryRequest.add((SalaryRequest) object);
                         }
                     }

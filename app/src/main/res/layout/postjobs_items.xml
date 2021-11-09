@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardview"
     android:layout_width="match_parent"
@@ -18,6 +17,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <!--Text View over Card View-->
+
+        <!--  <ImageView
+              android:id="@+id/img_icon"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_gravity="center"
+              android:scaleType="centerInside"
+              android:src="@drawable/profile_icon"
+              />-->
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="start"
-                android:text="Ui/Ux Designer"
+                android:text="Master - Ui/Ux Designer"
                 android:textColor="@color/blue_500" />
 
             <LinearLayout
@@ -38,30 +47,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/job_title"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="@string/rupee_icon"
-                    android:textSize="24sp" />
+                    android:scaleType="centerInside"
+                    android:src="@drawable/rupee" />
 
                 <TextView
                     android:id="@+id/job_salary"
                     style="@style/MediumTextView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/job_title"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:gravity="start"
-                    android:padding="5dp"
+                    android:gravity="start|center"
+                    android:paddingStart="5dp"
                     android:text="₹10000 - ₹20000 per hour" />
             </LinearLayout>
 
@@ -70,18 +73,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_salary"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="2dp">
 
                 <LinearLayout
                     android:id="@+id/ll_location"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_baseline_location_on_24" />
@@ -93,10 +96,11 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
                         android:gravity="start"
-                        android:padding="5dp"
+                        android:paddingStart="5dp"
                         android:text="Indian ocean"
                         android:textColor="@color/grey"
                         android:textSize="16sp" />
+
 
                 </LinearLayout>
             </LinearLayout>
@@ -106,7 +110,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_combine1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <ImageView
                     android:layout_width="24dp"
@@ -133,7 +138,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_rank"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <ImageView
                     android:layout_width="24dp"
@@ -160,11 +166,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_department"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="2dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
                     android:src="@drawable/ship_type" />
@@ -176,7 +183,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:gravity="start"
-                    android:padding="5dp"
+                    android:paddingStart="5dp"
                     android:text="Container Ship"
                     android:textColor="@color/grey"
                     android:textSize="16sp" />
@@ -187,11 +194,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_ship"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="2dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
                     android:src="@drawable/expiry_date" />
@@ -204,7 +212,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="2"
                     android:gravity="start"
-                    android:padding="5dp"
+                    android:paddingStart="5dp"
                     android:text="21-Oct-2021"
                     android:textColor="@color/grey"
                     android:textSize="16sp" />
@@ -222,13 +230,13 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/black" />
+                    android:background="@color/light_grey" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ll_expiry"
-                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -243,7 +251,8 @@
                             android:layout_height="24dp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
-                            android:src="@drawable/experience" />
+                            android:src="@drawable/calendar"
+                            card_view:tint="@color/info_color" />
 
                         <TextView
                             android:id="@+id/textview_experience"
@@ -252,9 +261,9 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:gravity="start"
-                            android:padding="5dp"
+                            android:paddingStart="5dp"
                             android:text="5 - 7 Years"
-                            android:textColor="@color/grey"
+                            android:textColor="@color/info_color"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -266,9 +275,8 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="end"
-                        android:padding="5dp"
                         android:text="Posted : 16-Oct-2021"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/green_400"
                         android:textSize="16sp" />
 
                 </LinearLayout>

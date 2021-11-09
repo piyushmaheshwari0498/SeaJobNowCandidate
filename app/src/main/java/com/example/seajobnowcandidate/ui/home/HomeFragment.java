@@ -19,6 +19,7 @@ import com.example.seajobnowcandidate.Adapter.HomeCategoryAdapter;
 import com.example.seajobnowcandidate.Adapter.HomeSuggestedAdapter;
 import com.example.seajobnowcandidate.Adapter.PostJobsAdapter;
 import com.example.seajobnowcandidate.Entity.request.HomeCategoryRequest;
+import com.example.seajobnowcandidate.Entity.request.PostJobDetailsRequest;
 import com.example.seajobnowcandidate.Model.PostJobs;
 import com.example.seajobnowcandidate.R;
 import com.example.seajobnowcandidate.Session.AppSharedPreference;
@@ -34,7 +35,7 @@ public class HomeFragment extends Fragment {
 
     List<HomeCategoryRequest> categoryRequestList;
     List<HomeCategoryRequest> categoryRequestList2;
-    List<PostJobs> source;
+    List<PostJobDetailsRequest> source;
     HomeCategoryAdapter categoryAdapter;
     HomeSuggestedAdapter categoryAdapter2;
     PostJobsAdapter postJobsAdapter;
@@ -126,9 +127,9 @@ public class HomeFragment extends Fragment {
     public void AddItemsToRecyclerViewArrayList()
     {
         source = new ArrayList<>();
-        source.add(new PostJobs("UI/UX Designer","Enginer","Master","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
-        source.add(new PostJobs("Kitchen Jr. Chef","Hotel","Chef","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
-        source.add(new PostJobs("Engine","Enginer","Master","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
+        source.add(new PostJobDetailsRequest("UI/UX Designer","Enginer","Master","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
+        source.add(new PostJobDetailsRequest("Kitchen Jr. Chef","Hotel","Chef","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
+        source.add(new PostJobDetailsRequest("Engine","Enginer","Master","₹10000 - ₹20000 per hour","Oil Tanker","Indian Ocean","10/10/2021","12/10/2021"));
 
         // Adding items to ArrayList
         categoryRequestList = new ArrayList<>();
