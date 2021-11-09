@@ -107,7 +107,7 @@
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:paddingStart="10dp"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -359,7 +359,7 @@
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:paddingStart="10dp"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -531,6 +531,429 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardview_present"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                card_view:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_present"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            style="@style/TitleTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="3"
+                            android:text="Present Address"
+                            android:textColor="@color/grey" />
+
+                        <ImageView
+                            android:id="@+id/imgPre_Address"
+                            android:layout_width="0dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_present_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="5dp">
+
+                                <TextView
+
+                                    style="@style/TitleTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/edit" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_present_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_pre_address"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/presrnt_add"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_pre_city_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_city_state"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Mumbai. Maharashtra"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_pre_country_pin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/tv_country_pin"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="India, 410210"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardview_permanent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                card_view:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_permanent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            style="@style/TitleTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="3"
+                            android:text="Permanent Address"
+                            android:textColor="@color/grey" />
+
+                        <ImageView
+                            android:id="@+id/imgPermanent_Address"
+                            android:layout_width="0dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_permanent_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="5dp">
+
+                                <TextView
+
+                                    style="@style/TitleTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/edit" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_permanent_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_permanent_address"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/presrnt_add"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_permanent_city_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_permanent_city_state"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Mumbai. Maharashtra"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_permanent_country_pin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/tv_permanent_country_pin"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="India, 410210"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.1"
+                                    android:text="Nearest Airport :"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_airport"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Sahara Airport"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.1"
+                                    android:text="Available Range :"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_availablity_range"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="10-11-2021 to 15-11-2021"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Describe yourself :"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_describe_youself"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/large_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hobbies,Passions and Pursuits :"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_hob_pass"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/large_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/describe_family"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_describe_family"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/family_describtion_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/cardview3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -577,6 +1000,7 @@
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
                         android:visibility="gone">
 
 
@@ -592,6 +1016,406 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:text="Add" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="5dp">
+
+                                <TextView
+
+                                    style="@style/TitleTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/edit" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_passport_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Passport Number :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_passport_number"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="J8369854"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_passport_validity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Date of Validity:"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_validity_date"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="10-Oct-2022"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_passport_place"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Visa Place :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_visa_place"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="MUMBAI"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_passport_issued_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Issued Date :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_issued_date"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="10-Oct-2015"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_passport_expiry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Expiry Date :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_expiry_date"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="10-Oct-2022"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_coc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="COC :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_coc"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text=""
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_grade"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Grade :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_coc_grade"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="grade"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_coc_issued"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Issued By :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_coc_issued"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="India"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_coc_issue_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Issued Date :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_coc_issue_date"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="10-Oct-2021"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_coc_expiry_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Expiry Date :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_coc_expiry_date"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="10-Oct-2024"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_cdc_book"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="CDC Book No. :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_cdc_book"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text=""
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_cdc_issued"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Issued By :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_cdc_issued"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="India"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_cdc_issue_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Issued Date :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_cdc_issue_date"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="10-Oct-2021"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_cdc_expiry_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="Expiry Date :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_cdc_expiry_date"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:text="10-Oct-2024"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
 
 
                         </LinearLayout>
@@ -610,32 +1434,577 @@
                 android:orientation="vertical"
                 card_view:cardElevation="8dp">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <TextView
-                        style="@style/TitleTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="3"
-                        android:text="Total Experience"
-                        android:textColor="@color/grey" />
+                    <LinearLayout
+                        android:id="@+id/ll_total_exp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="24dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_arrow_down" />
+                        <TextView
+                            style="@style/TitleTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="3"
+                            android:text="Total Experience"
+                            android:textColor="@color/grey" />
+
+                        <ImageView
+                            android:id="@+id/img_total_exp"
+                            android:layout_width="0dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_total_exp_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="5dp">
+
+                                <TextView
+
+                                    style="@style/TitleTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/edit" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Sailing Duration till date :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_sailing_exp"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="11 years"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Total leave duration :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_leave_duration"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="1 month"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Discontinuity in Contract :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_dis_contract_type"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Yes/No"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="if yesReason why?"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_dis_contract_reason"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/large_text"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Type of worked on :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_old_ship_type"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Bulk Carrier"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Flexible to Work on other types of ship?"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_flexible_work"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes/No"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Current Salary :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_curent_salary"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text=""
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Expected Salary :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_expected_salary"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text=""
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Preferred Contract Duration :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_contract_duration"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text=""
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Preferred Leave Duration :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_preferred_leave_duration"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text=""
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Any other prefrence :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_other_preference"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Size of ship :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_ship_size"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Big"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Age of ship :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_ship_age"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="11"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Trading Area :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_trading_area"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="No preference"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Food :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_food_preference"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Veg"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Family Carriage :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_family_carriage"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Yes"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Promotion :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_promotion"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Yes"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Vacation :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_vacation"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Yes"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Salary :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_sal"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Yes"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Regular Employment :"
+                                    android:textColor="@color/dark_grey" />
+
+                                <TextView
+                                    android:id="@+id/tv_regular"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Yes"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                 </LinearLayout>
-
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -646,31 +2015,257 @@
                 android:orientation="vertical"
                 card_view:cardElevation="8dp">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <TextView
-                        style="@style/TitleTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="3"
-                        android:text="Full Experience"
-                        android:textColor="@color/grey" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="24dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_arrow_down" />
+                        <TextView
+                            style="@style/TitleTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="3"
+                            android:text="Full Experience"
+                            android:textColor="@color/grey" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_full_exp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="5dp">
+
+                                <TextView
+
+                                    style="@style/TitleTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/edit" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ship Name :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_ship_name"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cruise"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ship Type :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_ship_type"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bulk"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Engine Type :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_engine_type"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:text="Engine Name"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Engine Power :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_engine_power"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:text="Engine Power"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="From Date :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_exp_from"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:text="2019"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="To Date :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_exp_to"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:text="2021"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="From time (Months) :"
+                                    android:textColor="@color/dark_grey" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_exp_time"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:text="36 Months"
+                                    android:textColor="@color/dark_grey_200" />
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                 </LinearLayout>
-
 
             </androidx.cardview.widget.CardView>
 

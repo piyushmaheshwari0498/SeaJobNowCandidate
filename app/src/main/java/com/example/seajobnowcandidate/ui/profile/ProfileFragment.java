@@ -23,7 +23,10 @@ public class ProfileFragment extends Fragment {
     private ProfileViewModel mViewModel;
     ProfileFragmentBinding binding;
     boolean isInfo = false;
-    boolean isPasword = false;
+    boolean isPassport = false;
+    boolean isFamily = false;
+    boolean isPreAdd = false;
+    boolean isPermanentAdd = false;
     public static ProfileFragment newInstance() {
         return new ProfileFragment();
     }
@@ -37,6 +40,7 @@ public class ProfileFragment extends Fragment {
         isInfo = true;
         binding.imgInfo.animate().rotationBy(180).setDuration(300).start();
         binding.llPassportData.setVisibility(View.GONE);
+
         binding.llInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,16 +57,64 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        binding.llFamily.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.imgFamily.animate().rotationBy(180).setDuration(300).start();
+                if(isFamily) {
+                    isFamily = false;
+                    binding.llFamilyData.setVisibility(View.GONE);
+                } else {
+                    // binding.imgInfo.animate().rotationBy(180).setDuration(500).start();
+                    isFamily = true;
+                    binding.llFamilyData.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+
+        binding.llPresent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.imgPreAddress.animate().rotationBy(180).setDuration(300).start();
+                if(isPreAdd) {
+                    isPreAdd = false;
+                    binding.llPresentData.setVisibility(View.GONE);
+                } else {
+                    // binding.imgInfo.animate().rotationBy(180).setDuration(500).start();
+                    isPreAdd = true;
+                    binding.llPresentData.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+
+        binding.llPermanent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.imgPermanentAddress.animate().rotationBy(180).setDuration(300).start();
+                if(isPreAdd) {
+                    isPreAdd = false;
+                    binding.llPermanentData.setVisibility(View.GONE);
+                } else {
+                    // binding.imgInfo.animate().rotationBy(180).setDuration(500).start();
+                    isPreAdd = true;
+                    binding.llPermanentData.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+
         binding.llPassport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 binding.imgPassport.animate().rotationBy(180).setDuration(300).start();
-                if(isPasword) {
-                    isPasword = false;
+                if(isPassport) {
+                    isPassport = false;
                     binding.llPassportData.setVisibility(View.GONE);
                 } else {
                     // binding.imgInfo.animate().rotationBy(180).setDuration(500).start();
-                    isPasword = true;
+                    isPassport = true;
                     binding.llPassportData.setVisibility(View.VISIBLE);
                 }
 

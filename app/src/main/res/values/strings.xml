@@ -65,6 +65,7 @@
     <string name="large_text">Marine engineer who has sailed on ships and has complete technical
         expertise of ships engines and generators operations,
         fuelling operations Detailed engine performance record and monitoring</string>
+    <string name="presrnt_add">Plot no, Trapinex House, 203, 5, Sholapur St,\nnear Dazzel Restaurant, Chinchbunder,\nMumbai, Maharashtra 400009</string>
     <string name="or">or</string>
     <string name="login_in">Log in</string>
     <string name="forgot_password_yv">Forgot Password?</string>
@@ -88,4 +89,6 @@
     <string name="salary_range">Expected Salary</string>
     <string name="basic_info">Basic Info</string>
     <string name="job_title">Job Tilte</string>
+    <string name="describe_family"><![CDATA[Tell us about your family? [No. of family members, do you stay with them? Your relationship with them? Who are you closest to & why?]]></string>
+    <string name="family_describtion_text"><![CDATA[Family members can be related by birth, marriage, or adoption. Your immediate family includes parents, siblings, spouse, and children. And your extended family includes people you are related to, such as grandparents, cousins, aunts & uncles, nephews, nieces etc.]]></string>
 </resources>
