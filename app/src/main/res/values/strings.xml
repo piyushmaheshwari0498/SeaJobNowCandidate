@@ -91,4 +91,5 @@
     <string name="job_title">Job Tilte</string>
     <string name="describe_family"><![CDATA[Tell us about your family? [No. of family members, do you stay with them? Your relationship with them? Who are you closest to & why?]]></string>
     <string name="family_describtion_text"><![CDATA[Family members can be related by birth, marriage, or adoption. Your immediate family includes parents, siblings, spouse, and children. And your extended family includes people you are related to, such as grandparents, cousins, aunts & uncles, nephews, nieces etc.]]></string>
+    <string name="skill_question">Are there any key areas in your job profile that you give more focus to? What activities do you undertake to bring constant improvements in these key areas ? [Such as: Taking online courses, networking, personality development, communication skill etc.]</string>
 </resources>

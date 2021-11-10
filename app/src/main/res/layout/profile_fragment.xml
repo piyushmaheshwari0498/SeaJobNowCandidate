@@ -2052,216 +2052,8 @@
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:paddingStart="10dp"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:paddingStart="5dp">
-
-                                <TextView
-
-                                    style="@style/TitleTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="" />
-
-                                <ImageView
-                                    android:layout_width="0dp"
-                                    android:layout_height="24dp"
-                                    android:layout_gravity="end"
-                                    android:layout_weight="0.2"
-                                    android:src="@drawable/edit" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:text="Ship Name :"
-                                    android:textColor="@color/dark_grey" />
-
-
-                                <TextView
-                                    android:id="@+id/tv_ship_name"
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="2"
-                                    android:layout_height="wrap_content"
-                                    android:text="Cruise"
-                                    android:textColor="@color/dark_grey_200" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:text="Ship Type :"
-                                    android:textColor="@color/dark_grey" />
-
-
-                                <TextView
-                                    android:id="@+id/tv_ship_type"
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="2"
-                                    android:layout_height="wrap_content"
-                                    android:text="Bulk"
-                                    android:textColor="@color/dark_grey_200" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:text="Engine Type :"
-                                    android:textColor="@color/dark_grey" />
-
-
-                                <TextView
-                                    android:id="@+id/tv_engine_type"
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="2"
-                                    android:layout_height="wrap_content"
-                                    android:text="Engine Name"
-                                    android:textColor="@color/dark_grey_200" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:text="Engine Power :"
-                                    android:textColor="@color/dark_grey" />
-
-
-                                <TextView
-                                    android:id="@+id/tv_engine_power"
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="2"
-                                    android:layout_height="wrap_content"
-                                    android:text="Engine Power"
-                                    android:textColor="@color/dark_grey_200" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:text="From Date :"
-                                    android:textColor="@color/dark_grey" />
-
-
-                                <TextView
-                                    android:id="@+id/tv_exp_from"
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="2"
-                                    android:layout_height="wrap_content"
-                                    android:text="2019"
-                                    android:textColor="@color/dark_grey_200" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:text="To Date :"
-                                    android:textColor="@color/dark_grey" />
-
-
-                                <TextView
-                                    android:id="@+id/tv_exp_to"
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="2"
-                                    android:layout_height="wrap_content"
-                                    android:text="2021"
-                                    android:textColor="@color/dark_grey_200" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:text="From time (Months) :"
-                                    android:textColor="@color/dark_grey" />
-
-
-                                <TextView
-                                    android:id="@+id/tv_exp_time"
-                                    style="@style/PaddingMediumTextView"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="2"
-                                    android:layout_height="wrap_content"
-                                    android:text="36 Months"
-                                    android:textColor="@color/dark_grey_200" />
-
-                            </LinearLayout>
-
-
-
-                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -2316,29 +2108,117 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <TextView
-                        style="@style/TitleTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="3"
-                        android:text="Vaccination"
-                        android:textColor="@color/grey" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="24dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_arrow_down" />
+                        <TextView
+                            style="@style/TitleTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="3"
+                            android:text="Vaccination"
+                            android:textColor="@color/grey" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_vaccinaion_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/PaddingMediumTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Vaccination Name :"
+                                android:textColor="@color/dark_grey" />
+
+                            <TextView
+                                android:id="@+id/tv_vacination_name"
+                                style="@style/PaddingMediumTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="CovodSheild"
+                                android:textColor="@color/dark_grey_200" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/PaddingMediumTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1st Dose :"
+                                android:textColor="@color/dark_grey" />
+
+                            <TextView
+                                android:id="@+id/tv_vacination_first"
+                                style="@style/PaddingMediumTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="10-Aug-2021"
+                                android:textColor="@color/dark_grey_200" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/PaddingMediumTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="2nd Dose :"
+                                android:textColor="@color/dark_grey" />
+
+                            <TextView
+                                android:id="@+id/tv_vacination_second"
+                                style="@style/PaddingMediumTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="10-Oct-2021"
+                                android:textColor="@color/dark_grey_200" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
                 </LinearLayout>
-
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -2349,31 +2229,231 @@
                 android:orientation="vertical"
                 card_view:cardElevation="8dp">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <TextView
-                        style="@style/TitleTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="3"
-                        android:text="Sea Journey"
-                        android:textColor="@color/grey" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="24dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_arrow_down" />
+                        <TextView
+                            style="@style/TitleTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="3"
+                            android:text="Sea Journey"
+                            android:textColor="@color/grey" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_seajourney_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="5dp">
+
+                                <TextView
+
+                                    style="@style/TitleTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/edit" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="How your seafarer journey begin?"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_journey_begin"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/large_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="What in your opinion makes you a good employee?"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_opinion"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/large_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Was there a point when you almost gave up? What kept you going at Sea?"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_describe_point"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/family_describtion_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Are you into this profession long term or short term?"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_describe_profession"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/family_describtion_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="How many onboard friends do you have? How did you meet your onboard friends?"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_onboard_friends"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/family_describtion_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/skill_question"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_skill_answers"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/family_describtion_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                 </LinearLayout>
-
 
             </androidx.cardview.widget.CardView>
 
@@ -2385,29 +2465,153 @@
                 android:orientation="vertical"
                 card_view:cardElevation="8dp">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <TextView
-                        style="@style/TitleTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="3"
-                        android:text="Growth &amp; Competition"
-                        android:textColor="@color/grey" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="24dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_arrow_down" />
+                        <TextView
+                            style="@style/TitleTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="3"
+                            android:text="Growth &amp; Competition"
+                            android:textColor="@color/grey" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_growth_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="5dp">
+
+                                <TextView
+
+                                    style="@style/TitleTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/edit" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="What is your future goals? ?"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_future_goals"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/large_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="What makes you preferred employee for the company?"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_perefect_employee"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Smart = Hard worling"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="How you got to know about us?"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_know_about_us"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Internet"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -2419,7 +2623,6 @@
                 android:layout_marginTop="5dp"
                 android:orientation="vertical"
                 card_view:cardElevation="8dp">
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2455,29 +2658,193 @@
                 android:orientation="vertical"
                 card_view:cardElevation="8dp">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <TextView
-                        style="@style/TitleTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="3"
-                        android:text="Courses"
-                        android:textColor="@color/grey" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="24dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_arrow_down" />
+                        <TextView
+                            style="@style/TitleTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="3"
+                            android:text="Courses"
+                            android:textColor="@color/grey" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_course_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="5dp">
+
+                                <TextView
+                                    style="@style/TitleTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/edit" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Basic STCW Courses Done?"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_stcw"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="YES/NO"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Course Details"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_course_details1"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/large_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Valued Added Courses Done"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/large_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Course Details"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    android:id="@+id/tv_course_details2"
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/large_text"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Certificate Image 1"
+                                    android:textColor="@color/dark_grey_200" />
+
+                                <TextView
+                                    style="@style/PaddingMediumTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Certificate Image 2"
+                                    android:textColor="@color/dark_grey_200" />
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
