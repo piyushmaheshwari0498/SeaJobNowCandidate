@@ -28,14 +28,13 @@
              android:queryHint="@string/searchhere"
              android:theme="@style/CursorSearchView" />
  -->
-        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardview2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="5dp"
-            card_view:cardElevation="8dp">
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:id="@+id/ll_Data_Found"
