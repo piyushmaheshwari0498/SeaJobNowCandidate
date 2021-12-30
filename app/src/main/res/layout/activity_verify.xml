@@ -79,7 +79,8 @@
                     android:gravity="end"
                     android:text="@string/resend_otp"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/blue_500" />
+                    android:textColor="@color/blue_500"
+                    android:visibility="gone"/>
                 <Button
                     android:id="@+id/btnSubmit"
                     android:layout_width="match_parent"

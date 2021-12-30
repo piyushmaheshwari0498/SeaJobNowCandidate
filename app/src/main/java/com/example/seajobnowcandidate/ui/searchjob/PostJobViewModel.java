@@ -1,4 +1,4 @@
-package com.example.seajobnowcandidate.ui.PostJob;
+package com.example.seajobnowcandidate.ui.searchjob;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

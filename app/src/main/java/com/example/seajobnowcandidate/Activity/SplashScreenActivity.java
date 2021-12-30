@@ -2,6 +2,8 @@ package com.example.seajobnowcandidate.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,8 +22,26 @@ public class SplashScreenActivity extends AppCompatActivity {
         activitySplashScreenBinding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
         setContentView(activitySplashScreenBinding.getRoot());
         internetConnection=new InternetConnection();
+        refreshItems();
+    }
+
+    private void showInternetDialoag() {
+        final AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Please connect to Internet")
+                .setCancelable(false)
+                .setMessage("No Internet Connection Available")
+                .setPositiveButton("Retry", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        refreshItems();
+                    }
+                })
+                .show();
+    }
+
+    private void refreshItems() {
         if (!internetConnection.checkConnection(getApplicationContext())) {
-            Custom_Toast.info(getApplicationContext(), getResources().getString(R.string.no_internet));
+            showInternetDialoag();
         }
         else {
             new Handler().postDelayed(new Runnable() {

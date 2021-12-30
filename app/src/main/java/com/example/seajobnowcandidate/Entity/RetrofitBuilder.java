@@ -9,7 +9,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitBuilder {
-    public static final String BASE_URL = "http://192.168.1.15/seaJobsNowAPI/";
+    public static final String BASE_URL = "http://api.seaconnector.com/";
     private static Retrofit retrofit;
     private static OkHttpClient okHttpClient;
 
@@ -20,9 +20,9 @@ public class RetrofitBuilder {
             httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.HEADERS);
 
             okHttpClient = new OkHttpClient.Builder()
-                     .readTimeout(30, TimeUnit.SECONDS)
-                     .writeTimeout(30, TimeUnit.SECONDS)
-                    .connectTimeout(300, TimeUnit.MILLISECONDS)
+                     .readTimeout(5, TimeUnit.SECONDS)
+                     .writeTimeout(5, TimeUnit.SECONDS)
+                    .connectTimeout(15, TimeUnit.SECONDS)
 //                    .addNetworkInterceptor(new StethoInterceptor())
                     .addInterceptor(httpLoggingInterceptor)
                     .build();

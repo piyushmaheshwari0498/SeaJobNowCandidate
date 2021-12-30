@@ -37,10 +37,12 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         activityFogotPasswordBinding = ActivityFogotPasswordBinding.inflate(getLayoutInflater());
         setContentView(activityFogotPasswordBinding.getRoot());
         internetConnection=new InternetConnection();
-        setTitle(Html.fromHtml("<small>Forgot Password</small>"));
+        /*setTitle(Html.fromHtml("<small>Forgot Password</small>"));
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_24dp);
         upArrow.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+        getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         activityFogotPasswordBinding.submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +78,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                         Intent i=new Intent(ForgotPasswordActivity.this,VerifyActivity.class);
                         startActivity(i);
+                        finish();
                         Log.e("otp", msg);
 
                     }
@@ -90,7 +93,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     } else {
-                        Toast.makeText(ForgotPasswordActivity.this, "Some Thing Went Wrong !!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ForgotPasswordActivity.this, "Something Went Wrong !!", Toast.LENGTH_LONG).show();
                     }
                 }
             }

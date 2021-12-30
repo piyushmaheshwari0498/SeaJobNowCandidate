@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
@@ -29,10 +30,17 @@ import com.bumptech.glide.request.transition.Transition;
 import com.example.seajobnowcandidate.Activity.LoginActivity;
 import com.example.seajobnowcandidate.Session.AppSharedPreference;
 import com.example.seajobnowcandidate.databinding.ActivityMainBinding;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 import com.squareup.picasso.Picasso;
+
+import java.util.Arrays;
 
 import javax.security.auth.callback.UnsupportedCallbackException;
 
@@ -46,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -90,33 +98,21 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
+
         /*
          * Call this function whenever you want to check user login
          * This will redirect user to LoginActivity is he is not
          * logged in
          **/
-        String tempUrl = "https://cdn-icons-png.flaticon.com/512/147/147144.png";
-        /*Glide.with(getApplicationContext()).asBitmap()
-                .load(tempUrl)
-                .into(new CustomTarget<Bitmap>() {
-                    @Override
-                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                        Drawable profileImage = new BitmapDrawable(getResources(), resource);
-                        try {
-                            navView.getMenu().getItem(R.id.nav_proifle).setIcon(R.drawable.ic_baseline_person_outline);
-                        }catch (Exception e){
-                            e.getStackTrace();
-                            Log.e("exception",e.getMessage());
-                        }
-                    }
-
-                    @Override
-                    public void onLoadCleared(@Nullable Drawable placeholder) {
-
-                    }
-                });*/
-
         appSharedPreference.checkLogin(this);
+
+        // Initialize the Mobile Ads SDK
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+//                Toast.makeText(getContext(), "Ad successful ", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 

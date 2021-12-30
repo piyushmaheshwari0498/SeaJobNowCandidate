@@ -43,7 +43,7 @@ public class HomeSuggestedAdapter extends RecyclerView.Adapter<HomeSuggestedAdap
     public void onBindViewHolder(@NonNull final HomeSuggestedAdapter.ViewHolder viewHolder, final int i) {
         viewHolder.categoryName.setText(categoryListFiltered.get(i).getCatName());
 //        photopath = categoryListFiltered.get(i).getCatPhoto();
-
+        viewHolder.img_icon.setImageResource(categoryListFiltered.get(i).getPhotoId());
 
         String url = image_URL + photopath;
         String not_found_url = image_not_found_URL + photopath;
@@ -73,13 +73,13 @@ public class HomeSuggestedAdapter extends RecyclerView.Adapter<HomeSuggestedAdap
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        //ImageView imageView_icon;
+        ImageView img_icon;
         TextView categoryName;
         //CardView rr_category;
 
         ViewHolder(View itemView) {
             super(itemView);
-            //imageView_icon = itemView.findViewById(R.id.imageView_icon);
+            img_icon = itemView.findViewById(R.id.img_icon);
             categoryName = itemView.findViewById(R.id.textview);
             //rr_category = itemView.findViewById(R.id.rr_category);
             //rr_category.setOnClickListener(this);

@@ -1,17 +1,22 @@
 package com.example.seajobnowcandidate.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.seajobnowcandidate.Entity.request.HomeCategoryRequest;
+import com.example.seajobnowcandidate.Activity.JobPostActivity;
+import com.example.seajobnowcandidate.Entity.request.VesselRequest;
 import com.example.seajobnowcandidate.R;
+import com.example.seajobnowcandidate.Utils.Constants;
 
 import java.util.List;
 
@@ -21,10 +26,20 @@ public class HomeCategoryAdapter extends RecyclerView.Adapter<HomeCategoryAdapte
     String image_URL = "http://forlimpopoli.in/beta_mobile/public/uploads/category/";
     String image_not_found_URL = "http://forlimpopoli.in/beta_mobile/public/assets/img/";
     String photopath;
-    List<HomeCategoryRequest> categoryListFiltered;
-    List<HomeCategoryRequest> originalList;
+    List<VesselRequest> categoryListFiltered;
+    List<VesselRequest> originalList;
 
-    public HomeCategoryAdapter(List<HomeCategoryRequest> categoryRequestList, Context context) {
+    int[] imageId = {R.drawable.oil_tanker,
+            R.drawable.offshore_platform,
+            R.drawable.lpg_tanker,
+            R.drawable.container,
+            R.drawable.bulker,
+            R.drawable.offshore_vessle,
+            R.drawable.roro,
+            R.drawable.pax,
+    };
+
+    public HomeCategoryAdapter(List<VesselRequest> categoryRequestList, Context context) {
         //  this.categoryRequestList = categoryRequestList;
         this.context = context;
         this.categoryListFiltered = categoryRequestList;
@@ -40,13 +55,12 @@ public class HomeCategoryAdapter extends RecyclerView.Adapter<HomeCategoryAdapte
 
     @Override
     public void onBindViewHolder(@NonNull final HomeCategoryAdapter.ViewHolder viewHolder, final int i) {
-        viewHolder.categoryName.setText(categoryListFiltered.get(i).getCatName());
-        viewHolder.imageView_icon.setImageDrawable(context.getResources().getDrawable(categoryListFiltered.get(i).getPhotoId()));
+        viewHolder.categoryName.setText(categoryListFiltered.get(i).getVtName());
+        viewHolder.imageView_icon.setImageResource(imageId[i]);
 //        photopath = categoryListFiltered.get(i).getCatPhoto();
 
 
-        String url = image_URL + photopath;
-        String not_found_url = image_not_found_URL + photopath;
+//        String url = image_URL + photopath;
         /*if (!url.contains("no-photo.jpg")) {
             Glide.with(context)
                     .load(url)
@@ -75,7 +89,7 @@ public class HomeCategoryAdapter extends RecyclerView.Adapter<HomeCategoryAdapte
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageView_icon;
         TextView categoryName;
-        // CardView rr_category;
+        LinearLayout rr_category;
 
 
 
@@ -84,19 +98,19 @@ public class HomeCategoryAdapter extends RecyclerView.Adapter<HomeCategoryAdapte
             super(itemView);
             imageView_icon = itemView.findViewById(R.id.imageView_icon);
             categoryName = itemView.findViewById(R.id.categoryName);
-//            rr_category = itemView.findViewById(R.id.rr_category);
-//            rr_category.setOnClickListener(this);
+            rr_category = itemView.findViewById(R.id.rr_category);
+            rr_category.setOnClickListener(this);
 
         }
 
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-//                case R.id.rr_category:
-                   /* Intent intent = new Intent(context, SubCategoryActivity.class);
-                    intent.putExtra(Constants.INTENT_KEYS.KEY_CATEGORY_ID, categoryListFiltered.get(getAdapterPosition()).getCatId());
-                    intent.putExtra(Constants.INTENT_KEYS.KEY_CATEGORY_NAME, categoryListFiltered.get(getAdapterPosition()).getCatName());
-                    context.startActivity(intent);*/
+                case R.id.rr_category:
+                    Intent intent = new Intent(context, JobPostActivity.class);
+                    intent.putExtra("cat_id", categoryListFiltered.get(getAdapterPosition()).getVtId());
+                    intent.putExtra("cat_name", categoryListFiltered.get(getAdapterPosition()).getVtName());
+                    context.startActivity(intent);
             }
         }
     }

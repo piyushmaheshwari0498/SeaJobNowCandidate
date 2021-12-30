@@ -47,7 +47,7 @@ public class SavedFragment extends Fragment {
 
     public void addItemsToRecyclerViewArrayList()
     {
-        SavedJob savedJob=new SavedJob("Senior Android Developer","amsys it services pvt ltd","Mumbai,Maharashtra","Saved today");
+        SavedJob savedJob=new SavedJob("Senior Engineer","Sea Connector","India","Saved today");
         savedJobList.add(savedJob);
 
     }

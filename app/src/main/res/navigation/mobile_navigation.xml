@@ -13,7 +13,7 @@
         tools:layout="@layout/home_fragment" />
     <fragment
         android:id="@+id/nav_find_jobs"
-        android:name="com.example.seajobnowcandidate.ui.PostJob.PostJobFragment"
+        android:name="com.example.seajobnowcandidate.ui.searchjob.PostJobFragment"
         android:label="Find Jobs"
         tools:layout="@layout/fragment_postjob" />
     <fragment

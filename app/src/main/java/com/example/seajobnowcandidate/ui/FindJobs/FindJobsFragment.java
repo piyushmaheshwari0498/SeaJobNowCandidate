@@ -11,21 +11,15 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.seajobnowcandidate.Activity.FindJobActivity;
-import com.example.seajobnowcandidate.R;
 import com.example.seajobnowcandidate.databinding.FragmentFindJobsBinding;
-import com.example.seajobnowcandidate.ui.PostJob.PostJobFragment;
+import com.example.seajobnowcandidate.ui.searchjob.PostJobFragment;
 import com.example.seajobnowcandidate.ui.RecentSearch.RecentSearchFragment;
-import com.google.android.material.chip.Chip;
-import com.google.android.material.chip.ChipDrawable;
-import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 import java.util.List;

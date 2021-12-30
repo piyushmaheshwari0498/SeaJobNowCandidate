@@ -41,10 +41,13 @@ public class VerifyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         activityVerifyBinding=ActivityVerifyBinding.inflate(getLayoutInflater());
         setContentView(activityVerifyBinding.getRoot());
-        setTitle(Html.fromHtml("<small>Verify OTP</small>"));
+        /*setTitle(Html.fromHtml("<small>Verify OTP</small>"));
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_24dp);
         upArrow.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+
+        getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         internetConnection=new InternetConnection();
 
@@ -81,6 +84,7 @@ public class VerifyActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                         Intent i=new Intent(VerifyActivity.this,ConfirmPasswordActivity.class);
                         startActivity(i);
+                        finish();
                     }
                 }
                 else {
@@ -132,6 +136,7 @@ public class VerifyActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);

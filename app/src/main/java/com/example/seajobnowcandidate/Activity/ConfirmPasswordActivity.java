@@ -36,10 +36,13 @@ public class ConfirmPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         activityConfirmPasswordBinding=ActivityConfirmPasswordBinding.inflate(getLayoutInflater());
         setContentView(activityConfirmPasswordBinding.getRoot());
-        setTitle(Html.fromHtml("<small>Confirm Password</small>"));
+       /* setTitle(Html.fromHtml("<small>Confirm Password</small>"));
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_24dp);
         upArrow.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+
+        getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         internetConnection=new InternetConnection();
         activityConfirmPasswordBinding.btnsave.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +76,7 @@ public class ConfirmPasswordActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                         Intent i=new Intent(ConfirmPasswordActivity.this, LoginActivity.class);
                         startActivity(i);
+                        finish();
                     }
                 }
                 else {

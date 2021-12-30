@@ -151,6 +151,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             return;
                         }
                         addLoginDetails();
+                        /*appSharedPreference.putStringValue(Constants.INTENT_KEYS.KEY_CANDIDATE_NAME,
+                                "Piyush" +
+                                "Pawan" + "Maheshwari");
+
+                        appSharedPreference.putBooleanValue(Constants.IS_LOGGED_IN, true);
+
+                        Intent mIntent = new Intent(LoginActivity.this, MainActivity.class);
+                        mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(mIntent);*/
                     }
                 } catch (Exception e) {
                     Log.d("loginError", e.getMessage());
@@ -189,9 +198,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         loginRequestList = response.body().getData();
                         if (!loginRequestList.isEmpty()) {
                             // TODO: 20-10-2021 Saving Data to SharedPreference
-                            appSharedPreference.putStringValue(Constants.INTENT_KEYS.KEY_CANDIDATE_NAME, loginRequestList.get(0).getFirstName() +
-
+                            appSharedPreference.putStringValue(Constants.INTENT_KEYS.KEY_CANDIDATE_FullNAME, loginRequestList.get(0).getFirstName() +
                                     loginRequestList.get(0).getMiddleName() + loginRequestList.get(0).getLastName());
+                            appSharedPreference.putStringValue(Constants.INTENT_KEYS.KEY_CANDIDATE_FNAME,loginRequestList.get(0).getFirstName());
+                            appSharedPreference.putStringValue(Constants.INTENT_KEYS.KEY_CANDIDATE_MNAME,loginRequestList.get(0).getMiddleName());
+                            appSharedPreference.putStringValue(Constants.INTENT_KEYS.KEY_CANDIDATE_LNAME,loginRequestList.get(0).getLastName());
+                            appSharedPreference.putStringValue(Constants.INTENT_KEYS.KEY_CANDIDATE_ID,loginRequestList.get(0).getScId());
+                            appSharedPreference.putStringValue(Constants.INTENT_KEYS.KEY_CANDIDATE_EMAIL,loginRequestList.get(0).getSc_pemail());
+                            appSharedPreference.putStringValue(Constants.INTENT_KEYS.KEY_CANDIDATE_INDOS,loginRequestList.get(0).getScUsername());
                             Log.d("name", loginRequestList.get(0).getFirstName() + loginRequestList.get(0).getMiddleName() + loginRequestList.get(0).getLastName());
 
                             appSharedPreference.putBooleanValue(Constants.IS_LOGGED_IN, true);
@@ -260,7 +274,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public boolean validateIndosNo() {
         String mob = activityLoginBinding.inputIndosno.getText().toString().trim();
         if (mob.isEmpty()) {
-            activityLoginBinding.inputLayoutIndosno.setError("Please Enter Indos Number");
+            if(cand_login_flag.equals("0"))
+                activityLoginBinding.inputLayoutIndosno.setError("Please Enter Indos Number");
+            else
+                activityLoginBinding.inputLayoutIndosno.setError("Please Enter CDC Number");
             return false;
         } else {
             activityLoginBinding.inputLayoutIndosno.setError(null);

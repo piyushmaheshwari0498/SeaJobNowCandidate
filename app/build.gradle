@@ -10,7 +10,7 @@ android {
         minSdk 21
         targetSdk 31
         versionCode 1
-        versionName "1.0"
+        versionName "beta 1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -65,4 +65,10 @@ dependencies {
 
     //OTP View
     implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+
+    //admob
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation 'com.google.android.gms:play-services-ads-lite:20.5.0'
+
+
 }

@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.seajobnowcandidate.databinding.ActivityFindJobBinding;
 import com.example.seajobnowcandidate.ui.FindJobs.FindJobViewModel;
-import com.example.seajobnowcandidate.ui.PostJob.PostJobFragment;
+import com.example.seajobnowcandidate.ui.searchjob.PostJobFragment;
 
 public class FindJobActivity extends AppCompatActivity {
 
@@ -25,12 +25,12 @@ public class FindJobActivity extends AppCompatActivity {
         binding = ActivityFindJobBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.btnCancelPost.setOnClickListener(new View.OnClickListener() {
+        /*binding.btnCancelPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
-        });
+        });*/
 
         binding.btnSearchJob.setOnClickListener(new View.OnClickListener() {
             @Override

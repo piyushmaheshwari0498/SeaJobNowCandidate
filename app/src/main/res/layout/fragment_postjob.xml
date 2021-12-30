@@ -60,14 +60,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="visible"
+                >
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_posted_jobs"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:nestedScrollingEnabled="false"
-                    android:scrollbars="vertical" />
+                    android:scrollbars="vertical"
+                    android:scrollIndicators="none"
+                    android:scrollbarSize="0dp"
+                    android:padding="16dp"/>
 
             </LinearLayout>
 

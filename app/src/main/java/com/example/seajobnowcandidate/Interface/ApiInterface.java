@@ -1,12 +1,16 @@
 package com.example.seajobnowcandidate.Interface;
 
+import com.example.seajobnowcandidate.Entity.request.RegisterRequest;
+import com.example.seajobnowcandidate.Entity.response.CandidateDetailsResponse;
 import com.example.seajobnowcandidate.Entity.response.CitySpinnerResponse;
 import com.example.seajobnowcandidate.Entity.response.ConfirmPwdResponse;
 import com.example.seajobnowcandidate.Entity.response.ForgotPasswordResponse;
 import com.example.seajobnowcandidate.Entity.response.LoginResponse;
 import com.example.seajobnowcandidate.Entity.response.OTPResponse;
+import com.example.seajobnowcandidate.Entity.response.PostJobDetailsResponse;
 import com.example.seajobnowcandidate.Entity.response.PostSpinnerResponse;
 import com.example.seajobnowcandidate.Entity.response.RegisterResponse;
+import com.example.seajobnowcandidate.Entity.response.VesselResponse;
 
 import java.util.HashMap;
 
@@ -22,7 +26,7 @@ public interface ApiInterface {
 
     //Register
     @POST("user/candidate_registration")
-    Call<RegisterResponse> getRegisterDetails(@Body HashMap<String, Object> loginResponse);
+    Call<RegisterResponse> getRegisterDetails(@Body RegisterRequest registerRequest);
 
     //Spinner City,state,country
     @GET("user/candidate_registration_assets")
@@ -43,4 +47,26 @@ public interface ApiInterface {
     //Spinner data which is fetching POst Job Department{} Rank{} etc.
     @GET("company/company_jobPost_assets")
     Call<PostSpinnerResponse> getPostSpinner();
+
+    //Confirm Password
+    @POST("user/dashboard")
+    Call<VesselResponse> getVesselType(@Body HashMap<String, Object> VesselResponse);
+
+    //Fetch Post Jobs by User Id
+    @POST("user/joblist_or_aspervesseljoblist")
+    Call<PostJobDetailsResponse> getPostJonData(@Body HashMap<String, Object> postjobDetailsResponse);
+
+    //Fetch Post Jobs Details by Post Id
+    @POST("company/view_jobPost_details")
+    Call<PostJobDetailsResponse> getPostJobDetailsByPostIdData(@Body HashMap<String, Object> postjobDetailsResponse);
+
+    //Search Job
+    @POST("user/jobsearch")
+    Call<PostJobDetailsResponse> getSearchedJob(@Body HashMap<String, Object> hashMap);
+
+    @POST("company/candidate_details")
+    Call<CandidateDetailsResponse> getProfileDetails(@Body HashMap<String, Object> hashMap);
+
+
+
 }

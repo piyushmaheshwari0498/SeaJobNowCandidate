@@ -19,14 +19,7 @@
         android:orientation="vertical">
         <!--Text View over Card View-->
 
-        <!--  <ImageView
-              android:id="@+id/img_icon"
-              android:layout_width="40dp"
-              android:layout_height="40dp"
-              android:layout_gravity="center"
-              android:scaleType="centerInside"
-              android:src="@drawable/profile_icon"
-              />-->
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -39,22 +32,66 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/google" />
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:elevation="10dp"
+                        android:id="@+id/cc_logo"
+                        card_view:cardCornerRadius="50dp">
+
+                        <ImageView
+                            android:id="@+id/company_logo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerInside"
+                            android:visibility="visible"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:elevation="10dp"
+                        android:id="@+id/cc_tv_logo"
+                        card_view:cardCornerRadius="50dp">
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:id="@+id/tv_company_logo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:background="@color/yellow_400"
+                            android:textColor="@color/white"
+                            android:visibility="visible"
+                            android:textAllCaps="true"/>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/job_title"
-                    style="@style/TitleTextView"
+                    style="@style/MediumTextView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="start"
                     android:paddingStart="5dp"
                     android:text="Ui/Ux Designer"
+                    android:textStyle="bold"
                     android:textColor="@color/blue_500" />
             </LinearLayout>
 
@@ -65,25 +102,26 @@
                 android:layout_below="@id/ll_ho"
                 android:orientation="horizontal"
                 android:paddingStart="2dp"
-                android:paddingTop="5dp"
-                >
+                android:paddingTop="5dp">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
-                    android:src="@drawable/rupee" />
+                    android:src="@drawable/rupee"
+                    card_view:tint="@color/dark_grey_200" />
 
                 <TextView
                     android:id="@+id/job_salary"
                     style="@style/MediumTextView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="start|center"
                     android:paddingStart="5dp"
-                    android:text="₹10000 - ₹20000 per hour" />
+                    android:text="₹10000 - ₹20000 per hour"
+                    android:textColor="@color/dark_grey_200" />
             </LinearLayout>
 
             <LinearLayout
@@ -106,6 +144,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:scaleType="centerInside"
+                        card_view:tint="@color/dark_grey_200"
                         android:src="@drawable/ic_baseline_location_on_24" />
 
                     <TextView
@@ -303,7 +342,7 @@
                         android:layout_weight="1"
                         android:gravity="end"
                         android:padding="5dp"
-                        android:text="Posted : 16-Oct-2021"
+                        android:text="16-Oct-2021"
                         android:textColor="@color/grey"
                         android:textSize="16sp" />
 

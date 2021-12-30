@@ -55,9 +55,23 @@ public class PostJobDetailsRequest {
     @SerializedName("cjm_status")
     @Expose
     private String cjmStatus;
+    @SerializedName("company_logo")
+    @Expose
+    private String company_logo;
+    @SerializedName("comp_name")
+    @Expose
+    private String comp_name;
+    @SerializedName("comp_email")
+    @Expose
+    private String compEmail;
+    @SerializedName("comp_mobile")
+    @Expose
+    private String compMobile;
+
 
     public PostJobDetailsRequest(String job_title, String department,
-                    String rank, String salary, String ship_type, String location, String start_date, String end_date) {
+                    String rank, String salary, String ship_type, String location,
+                                 String start_date, String end_date,String company_logo, String comp_name) {
         this.cjmPostName = job_title;
         this.cjmDepartment = department;
         this.cjmRank = rank;
@@ -66,6 +80,40 @@ public class PostJobDetailsRequest {
         this.cjmJobLocation = location;
         this.cjmStartDate = start_date;
         this.cjmExpiryDate = end_date;
+        this.company_logo = company_logo;
+        this.comp_name = comp_name;
+    }
+
+    public String getCompEmail() {
+        return compEmail;
+    }
+
+    public void setCompEmail(String compEmail) {
+        this.compEmail = compEmail;
+    }
+
+    public String getCompMobile() {
+        return compMobile;
+    }
+
+    public void setCompMobile(String compMobile) {
+        this.compMobile = compMobile;
+    }
+
+    public String getCompany_logo() {
+        return company_logo;
+    }
+
+    public void setCompany_logo(String company_logo) {
+        this.company_logo = company_logo;
+    }
+
+    public String getComp_name() {
+        return comp_name;
+    }
+
+    public void setComp_name(String comp_name) {
+        this.comp_name = comp_name;
     }
 
     public String getCjmId() {
@@ -224,6 +272,10 @@ public class PostJobDetailsRequest {
                 ", cjmVesselType='" + cjmVesselType + '\'' +
                 ", cjmJobLocation='" + cjmJobLocation + '\'' +
                 ", cjmStatus='" + cjmStatus + '\'' +
+                ", company_logo='" + company_logo + '\'' +
+                ", comp_name='" + comp_name + '\'' +
+                ", compEmail='" + compEmail + '\'' +
+                ", compMobile='" + compMobile + '\'' +
                 '}';
     }
 }
